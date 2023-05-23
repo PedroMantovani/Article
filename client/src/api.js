@@ -21,13 +21,13 @@ export default class API {
   }
 
   // update post into database
-  static async addPost(id, post) {
+  static async updatePost(id, post) {
     const res = await axios.patch(`${url}/${id}`, post);
     return res.data;
   }
 
   // delete a post
-  static async addPost(id) {
+  static async deletePost(id) {
     const res = await axios.delete(`${url}/${id}`);
     return res.data;
   }
